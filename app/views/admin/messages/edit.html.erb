@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-sm-5 col-md-6">
+    <h1>Editing message</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-8 col-md-10">
+    <%= render 'form' %>
+  </div>
+</div>
+<br />
+<div class="row">
+  <div class="col-sm-5 col-md-6">
+    <%= link_to 'Show', admin_message_path(@message), class: 'btn btn-success' %> |
+    <%= link_to 'Back', admin_messages_path, class: 'btn btn-success' %>
+  </div>
+</div>

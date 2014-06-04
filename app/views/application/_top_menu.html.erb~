@@ -1,0 +1,14 @@
+<ul class="nav nav-pills pull-right">
+  <li><a href="#">Free Trial</a></li>
+  <li><a href="#">View Demo</a></li>
+  <% if !current_user.nil? %>
+    <li><%= link_to('My Dashboard', :dashboard) %></li>
+  <% end %>
+  <li>
+    <%=
+       link_to_if(current_user.nil?, "Sign In", :signin,  method: :get) do
+         link_to('Sign Out', :signout_delete, method: :delete)
+       end
+    %>
+  </li>
+</ul>

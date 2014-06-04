@@ -1,0 +1,31 @@
+<%= form_tag('', {method: :get, class: 'form-inline', role: 'form'}) do %>
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="input-group">
+        <span class="input-group-addon devise-select-label"><i class="fa fa-android"></i></span>
+        <%= collection_select(:device, :id, all_device, :id, :name, {:selected => selected_device, prompt: "Pick a Device"}, {class: "form-control input-device"}) %>
+      </div>
+    </div><!-- /.col-lg-6 -->
+    <div class="col-lg-8 input-daterange">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon">From</span>
+            <%= text_field_tag :start_time, params[:start_time], placeholder: 'Start Time', class: 'form-control input-small' %>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="input-group">
+            <span class="input-group-addon">To</span>
+            <%= text_field_tag :end_time, params[:end_time], placeholder: 'End Time', class: 'form-control input-small' %>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.col-lg-6 -->
+    <div class="col-lg-1">
+      <div class="input-group">
+        <%= submit_tag(:search, name: nil, class: 'btn btn-default') %>
+      </div>
+    </div>
+  </div><!-- /.row -->
+<% end %>

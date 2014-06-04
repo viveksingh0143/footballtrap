@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uniqid: MyString
+  number: MyString
+  name: MyString
+  device_id: 
+
+two:
+  uniqid: MyString
+  number: MyString
+  name: MyString
+  device_id: 

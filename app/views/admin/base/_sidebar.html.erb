@@ -1,0 +1,37 @@
+<ul class="nav">
+  <li>
+  <%= link_to(admin_devices_path(), class: "active") do %>
+    <%= content_tag(:i, "", class: "fa fa-mobile fa-mobilex") %> Device Info <%= content_tag(:span, all_device.size, class: "field-count btn btn-xs btn-black") %>
+  <% end %>
+  </li>
+  <li>
+  <%= link_to(admin_locations_path(device_id: params[:device_id], start_time: params[:start_time], end_time: params[:end_time])) do %>
+    <%= content_tag(:i, "", class: "fa fa-map-marker") %> GPS Location <%= content_tag(:span, Location.where(device_id: selected_device).count, class: "field-count btn btn-xs btn-black") %>
+  <% end %>
+  </li>
+  <% if current_user.admin? %>
+    <li>
+    <%= link_to(admin_users_path) do %>
+      <%= content_tag(:i, "", class: "fa fa-briefcase") %> Users <%= content_tag(:span, User.count, class: "field-count btn btn-xs btn-black") %>
+    <% end %>
+    </li>
+    <li>
+    <%= link_to(admin_pages_path) do %>
+      <%= content_tag(:i, "", class: "fa fa-book") %> Pages <%= content_tag(:span, Page.count, class: "field-count btn btn-xs btn-black") %>
+    <% end %>
+    </li>
+    
+    <li>
+    <%= link_to(admin_forms_path) do %>
+      <%= content_tag(:i, "", class: "fa fa-comment") %> Forms <%= content_tag(:span, Form.count, class: "field-count btn btn-xs btn-black") %>
+    <% end %>
+    </li>
+
+    <li>
+    <%= link_to(reset_path) do %>
+      <%= content_tag(:i, "", class: "fa fa-thumbs-o-down
+") %> Reset
+    <% end %>
+    </li>
+  <% end %>
+</ul>

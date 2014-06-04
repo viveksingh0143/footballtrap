@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Mobiletrap Subscriber</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= stylesheet_link_tag    "themes/subscriber", media: "all", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <%= favicon_link_tag 'ico/favicon-144-144.ico', rel: 'apple-touch-icon-precomposed', sizes: '144x144' %>
+    <%= favicon_link_tag 'ico/favicon-114-114.ico', rel: 'apple-touch-icon-precomposed', sizes: '114x114' %>
+      <%= favicon_link_tag 'ico/favicon-72-72.ico', rel: 'apple-touch-icon-precomposed', sizes: '72x72' %>
+        <%= favicon_link_tag 'ico/favicon.ico', rel: 'apple-touch-icon-precomposed' %>
+          <%= favicon_link_tag 'ico/favicon.ico', rel: 'shortcut icon' %>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="masthead">
+          <h3 class="muted"><%= link_to image_tag("img/subscriber-logo.png", style: 'max-width: 100%;'), dashboard_url %></h3>
+          <%= render 'main_menu' %>
+        </div>
+      </div>
+    </div>
+    <div class="header-search">
+      <div class="container">
+        <div class="masthead">
+          <%= render 'searchbar' %>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row-fluid">
+        <div class="col-sm-6 col-md-3 side-bar">
+          <h3 class="side-bar-caption">Explore Device</h3>
+          <%= render 'sidebar' %>
+        </div>
+        <div class="col-sm-6 col-md-9 main-content">
+          <%= yield %>
+        </div>
+      </div>
+      <div class="row"></div>
+
+      <div class="footer">
+        <p>&copy; Company 2013</p>
+      </div>
+
+    </div> <!-- /container -->
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <script>
+      $('div.header-search .input-daterange').datepicker({
+        format: "dd/mm/yyyy",
+        todayBtn: "linked",
+        autoclose: true,
+        todayHighlight: true
+      });
+    </script>
+  </body>
+</html>

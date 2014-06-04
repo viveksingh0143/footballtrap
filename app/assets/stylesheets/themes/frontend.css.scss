@@ -1,0 +1,223 @@
+@import "font-awesome";
+body {
+  /*padding-bottom: 40px;*/
+  background-image: url(/assets/img/body-bg.jpg);
+  background-repeat: repeat-x;
+  background-position: top;
+}
+
+div.body-content-blank {
+  margin-top: 20px;
+  background-color: #deead0;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+  min-height: 430px;
+}
+
+div.top-green-line {
+  background-color: #347a00;
+  height: 3px;
+}
+div.top-small-menu:before, div.top-small-menu:after, div.top-green-line:before, div.top-green-line:after {
+  clear: both;
+}
+
+div.top-small-menu .nav-pills > li > a, div.top-small-menu .nav-pills > li > a:visited, div.top-small-menu .nav-pills > li > a:focus {
+  border-radius: 0px;
+  background-color: #347a00;
+  color: #ffffff;
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 5px;
+}
+div.top-small-menu .nav-pills > li > a:hover {
+  background-color: #000234;
+}
+div.masthead ul.nav {
+  margin-top: 50px;
+  border-bottom: #000000 solid 2px;
+}
+div.masthead ul.nav > li > a, div.masthead ul.nav > li > a.visited, div.masthead ul.nav > li > a:focus {
+  border-radius: 0px;
+  padding-bottom: 7px;
+  color: #000000;
+}
+div.masthead .nav-pills > li > a:hover {
+  background-color: #347a00;
+  color: #FFFFFF;
+}
+
+.page-title {
+  display: block;
+  background-color: #FFFFFF;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-bottom: #398439 solid 3px;
+}
+.page-title h2 {
+  color: #5d9042;
+  border: 1px dashed #5d9042;
+  margin: 0px;
+  padding: 5px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+
+
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 0px;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 5px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.glyphicon {
+  margin-right: 4px !important; /*override*/
+}
+.pagination .glyphicon {
+  margin-right: 0px !important; /*override*/
+}
+.pagination a {
+  color: #555;
+}
+.panel ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+.news-item {
+  padding: 4px 4px;
+  margin: 0px;
+  border-bottom: 1px dotted #555;
+}
+.btn-nav {
+  margin-bottom: 20px;
+}
+.btn-nav > li > a:hover, .btn-nav > li > a:focus {
+  background-color: #6BF137 !important;
+}
+.page-title {
+  color: #398439;
+  background-color: whitesmoke;
+  padding: 10px;
+  font-family: sans-serif; 
+}
+img {
+  max-width: 100%;
+}
+.footer-area {
+  color: #556262;
+  background-color: #121412;
+  margin-top: 20px;
+}
+.copyright-line {
+  background-color:#000000;
+  color: #CCCCCC;
+}
+.copyright-line p {
+  padding-top: 10px;
+}
+.footer-head {
+  color: #367500;
+  font-size: 18px;
+  border-bottom: solid 1px;
+  width: 60%;
+}
+.footer-area .nav > li > a {
+  padding: 0px;
+}
+.footer-area a {
+  color: #556262;
+  font-size: 12px;
+}
+.slight-margin {
+  margin-top: 10px;
+}
+
+.btn-nav>li>a:hover, .btn-nav>li>a:focus {
+  background-color: #FFFFFF !important;
+  color: #1D6600;
+}
+#side-area {
+  padding-top: 20px;
+}
+ul.wysihtml5-toolbar {
+  list-style: none;
+  padding-left: 0px;
+}
+
+ul.wysihtml5-toolbar li{
+  float: left;
+}

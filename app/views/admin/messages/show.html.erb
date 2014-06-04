@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Uniqid:</strong>
+  <%= @message.uniqid %>
+</p>
+<p>
+  <strong>Contact:</strong>
+  <%= @message.contact %>
+</p>
+<p>
+  <strong>Msg type:</strong>
+  <%= @message.msg_type %>
+</p>
+<p>
+  <strong>Message:</strong>
+  <%= @message.message %>
+</p>
+<p>
+  <strong>Time:</strong>
+  <%= @message.time %>
+</p>
+<p>
+  <strong>Device:</strong>
+  <%= @message.device %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_message_path(@message), class: 'btn btn-success' %> |
+<%= link_to 'Back', admin_messages_path, class: 'btn btn-success' %>

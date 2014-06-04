@@ -1,0 +1,31 @@
+<%= jwplayer_assets %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Uniqid:</strong>
+  <%= @video.uniqid %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @video.title %>
+</p>
+
+<p>
+  <strong>Capture:</strong>
+  <%= @video.capture %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+  <%= video_tag admin_video_display_path(@video.id), :size => "320x240", :controls => true %>
+</p>
+
+<p>
+  <strong>Device:</strong>
+  <%= @video.device.name %>
+</p>
+
+<%= link_to 'Edit', edit_admin_video_path(@video), class: 'btn btn-success' %> |
+<%= link_to 'Back', admin_videos_path, class: 'btn btn-success' %>

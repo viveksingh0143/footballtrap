@@ -1,0 +1,43 @@
+class AddDetailsToDevices < ActiveRecord::Migration
+  def change
+    add_column :devices, :deviceid, :string
+    add_column :devices, :device_software_version, :string
+    add_column :devices, :version_incremental, :string
+    add_column :devices, :os_version, :string
+    add_column :devices, :available_processors, :string
+    add_column :devices, :build_id, :string
+    add_column :devices, :build_board, :string
+    add_column :devices, :build_bootloader, :string
+    add_column :devices, :build_brand, :string
+    add_column :devices, :build_display, :string
+    add_column :devices, :build_fingerprint, :string
+    add_column :devices, :build_hardware, :string
+    add_column :devices, :build_host, :string
+    add_column :devices, :build_manufacturer, :string
+    add_column :devices, :build_model, :string
+    add_column :devices, :build_product, :string
+    add_column :devices, :build_serial, :string
+    add_column :devices, :build_tags, :string
+    add_column :devices, :build_time, :string
+    add_column :devices, :build_type, :string
+    add_column :devices, :build_unknown, :string
+    add_column :devices, :builduser, :string
+    add_column :devices, :build_cpu_abi, :string
+    add_column :devices, :build_cpu_abi2, :string
+    add_column :devices, :build_version_release, :string
+    add_column :devices, :build_version_sdk, :string
+    add_column :devices, :free_memory_latitude, :string
+    add_column :devices, :line1_number_longitude, :string
+    add_column :devices, :max_memory, :string
+    add_column :devices, :network_kountry_iso, :string
+    add_column :devices, :network_operator_name, :string
+    add_column :devices, :os_build_brand, :string
+    add_column :devices, :os_build_device, :string
+    add_column :devices, :os_build_manufacturer, :string
+    add_column :devices, :os_build_model, :string
+    add_column :devices, :os_build_version_release, :string
+    add_column :devices, :sim_kountry_iso, :string
+    add_column :devices, :sim_serial_number, :string
+    add_column :devices, :voice_mail_number, :string
+  end
+end

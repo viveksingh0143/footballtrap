@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Uniqid:</strong>
+  <%= @audio.uniqid %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @audio.title %>
+</p>
+
+<p>
+  <strong>Capture:</strong>
+  <%= @audio.capture %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= audio_tag admin_audio_display_path(@audio.id), :controls => true %>
+</p>
+
+<p>
+  <strong>Device:</strong>
+  <%= @audio.device.name %>
+</p>
+
+<%= link_to 'Edit', edit_admin_audio_path(@audio), class: 'btn btn-success' %> |
+<%= link_to 'Back', admin_audios_path, class: 'btn btn-success' %>

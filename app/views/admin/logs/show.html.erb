@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Uniqid:</strong>
+  <%= @log.uniqid %>
+</p>
+<p>
+  <strong>Contact:</strong>
+  <%= @log.contact %>
+</p>
+<p>
+  <strong>Log type:</strong>
+  <%= @log.log_type %>
+</p>
+<p>
+  <strong>Time:</strong>
+  <%= @log.time %>
+</p>
+<p>
+  <strong>Duration:</strong>
+  <%= @log.duration %>
+</p>
+<p>
+  <strong>Device:</strong>
+  <%= @log.device %>
+</p>
+
+<%= link_to 'Edit', edit_admin_log_path(@log), class: 'btn btn-success' %> |
+<%= link_to 'Back', admin_logs_path, class: 'btn btn-success' %>

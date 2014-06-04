@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  program: MyString
+  version: MyString
+  package: MyString
+  device_id: 
+
+two:
+  program: MyString
+  version: MyString
+  package: MyString
+  device_id: 

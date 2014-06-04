@@ -1,0 +1,24 @@
+<div class="col-sm-12">
+<%= simple_form_for([:admin, @page], :html => {class: 'form-horizontal', role: 'form'}) do |f| %>
+  <%= f.error_notification %>
+
+    
+  <div class="form-group">
+    <%= f.input :title, placeholder: 'Title', input_html: { class: 'form-control' } %>
+  </div>
+        
+  <div class="form-group">
+    <%= f.input :slug, placeholder: 'Slug', input_html: { class: 'form-control' } %>
+  </div>
+        
+  <div class="form-group">
+    <% #= f.input :body, :as  => :text, placeholder: 'Body', class: 'form-control', width: '100%', rows: 30, input_html: { class: 'form-control' } %>
+    <%= f.bootsy_area :body, editor_options: { font_styles: true, emphasis: true, lists: true, html: true, link: true, image: true, color: true}, placeholder: 'Body', class: 'form-control', width: '100%', rows: 30, input_html: { class: 'form-control' } %>
+  </div>
+    
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-success' %>
+  </div>
+<% end %>
+</div>
+

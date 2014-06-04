@@ -1,0 +1,170 @@
+<div class="col-sm-6">
+<%= simple_form_for([:admin, @device], :html => {class: 'form-horizontal', role: 'form'}) do |f| %>
+  <%= f.error_notification %>
+  <div class="form-group">
+    <%= f.input :name, placeholder: 'Name', input_html: { class: 'form-control' } %>
+  </div>
+        
+  <div class="form-group">
+    <%= f.input :imei, placeholder: 'Imei', input_html: { class: 'form-control' } %>
+  </div>
+        
+  <div class="form-group">
+    <%= f.input :serial_number, placeholder: 'Serial number', input_html: { class: 'form-control' } %>
+  </div>
+        
+  <div class="form-group">
+    <%= f.input :devise_type, placeholder: 'Devise type', input_html: { class: 'form-control' } %>
+  </div>
+        
+  <div class="form-group">
+    <%= f.input :os, placeholder: 'Os', input_html: { class: 'form-control' } %>
+  </div>
+        
+  <div class="form-group">
+    <%= f.input :hardware_platform, placeholder: 'Hardware platform', input_html: { class: 'form-control' } %>
+  </div>
+        
+  <div class="form-group">
+    <%= f.input :platform_string, placeholder: 'Platform string', input_html: { class: 'form-control' } %>
+  </div>
+        
+  <div class="form-group">
+    <%= f.input :total_memory, placeholder: 'Total memory', input_html: { class: 'form-control' } %>
+  </div>
+        
+  <div class="form-group">
+    <%= f.input :total_disk, placeholder: 'Total disk', input_html: { class: 'form-control' } %>
+  </div>
+        
+  <div class="form-group">
+    <%= f.input :free_disk_space, placeholder: 'Free disk space', input_html: { class: 'form-control' } %>
+  </div>
+
+  <div class="form-group"> 
+    <%= f.input :deviceid, placeholder: 'Device Id', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :device_software_version, placeholder: 'Device Software Version', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :version_incremental, placeholder: 'Version Incremental', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :os_version, placeholder: 'Os Version', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :available_processors, placeholder: 'Available Processors', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :build_id, placeholder: 'Build Id', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :build_board, placeholder: 'Build Board', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :build_bootloader, placeholder: 'Build Bootloader', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :build_brand, placeholder: 'Build Brand', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :build_display, placeholder: 'Build Display', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :build_fingerprint, placeholder: 'Build Fingerprint', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :build_hardware, placeholder: 'Build Hardware', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :build_host, placeholder: 'Build Host', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :build_manufacturer, placeholder: 'Build Manufacturer', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :build_model, placeholder: 'Build Model', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :build_product, placeholder: 'Build Product', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :build_serial, placeholder: 'Build Serial', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :build_tags, placeholder: 'Build Tags', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :build_time, placeholder: 'Build Time', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :build_type, placeholder: 'Build Type', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :build_unknown, placeholder: 'Build Unknown', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :builduser, placeholder: 'Build User', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :build_cpu_abi, placeholder: 'Build Cpu Abi', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :build_cpu_abi2, placeholder: 'Build Cpu Abi2', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :build_version_release, placeholder: 'Build Version Release', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :build_version_sdk, placeholder: 'Build Version Sdk', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :free_memory_latitude, placeholder: 'Free Memory Latitude', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :line1_number_longitude, placeholder: 'Line1 Number Longitude', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :max_memory, placeholder: 'Max Memory', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :network_kountry_iso, placeholder: 'Network CountryIso', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :network_operator_name, placeholder: 'Network Operator Name', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :os_build_brand, placeholder: 'Os Build Brand', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :os_build_device, placeholder: 'Os Build Device', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :os_build_manufacturer, placeholder: 'Os Build Manufacturer', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :os_build_model, placeholder: 'Os Build Model', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :os_build_version_release, placeholder: 'Os Build Version Release', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :sim_kountry_iso, placeholder: 'Sim Country Iso', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :sim_serial_number, placeholder: 'Sim Serial Number', input_html: { class: 'form-control' } %> 
+  </div>
+  <div class="form-group"> 
+    <%= f.input :voice_mail_number, placeholder: 'Voice Mail Number', input_html: { class: 'form-control' } %> 
+  </div>
+        
+  <div class="form-group">
+    <%= f.association :user, label_method: :username, value_method: :id, include_blank: true, input_html: { class: 'form-control' } %>
+  </div>
+    
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-success' %>
+  </div>
+<% end %>
+</div>

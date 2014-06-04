@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Uniqid:</strong>
+  <%= @contact.uniqid %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @contact.number %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @contact.name %>
+</p>
+
+<p>
+  <strong>Device:</strong>
+  <%= @contact.device.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_contact_path(@contact), class: 'btn btn-success' %> |
+<%= link_to 'Back', admin_contacts_path, class: 'btn btn-success' %>

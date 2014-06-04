@@ -1,0 +1,30 @@
+<div class="col-sm-6">
+<%%= simple_form_for(@<%= singular_table_name %>, :html => {class: 'form-horizontal', role: 'form'}) do |f| %>
+  <%%= f.error_notification %>
+
+  <%- attributes.each do |attribute| -%>
+    <%- if attribute.name=='password' -%>
+
+  <div class="form-group">
+    <%%= f.input :<%= attribute.name %>, placeholder: '<%= attribute.human_name %>', input_html: { class: 'form-control' } %>
+  </div>
+  <div class="form-group">
+    <%%= f.input :password_confirmation, placeholder: 'Password Confirmation', input_html: { class: 'form-control' } %>
+  </div>
+    <% else -%>
+    
+  <div class="form-group">
+      <%- if attribute.reference? -%>
+    <%%= f.association :<%= attribute.name %>, label_method: :name, value_method: :id, include_blank: true, input_html: { class: 'form-control' } %>
+      <%- else -%>
+    <%%= f.input :<%= attribute.name %>, placeholder: '<%= attribute.human_name %>', input_html: { class: 'form-control' } %>
+      <%- end -%>
+  </div>
+    <% end -%>
+  <%- end -%>
+
+  <div class="form-actions">
+    <%%= f.button :submit %>
+  </div>
+<%% end %>
+</div>

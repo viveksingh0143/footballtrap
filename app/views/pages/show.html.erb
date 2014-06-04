@@ -1,0 +1,5 @@
+<% if @page %>
+  <h1 class="page-title"><%= raw(@page.title) %><%= link_to 'Edit', edit_admin_page_path(@page) if current_user && current_user.admin %></h1>
+  <div class="clearfix"></div>
+  <%= raw @page.body %>
+<% end -%>

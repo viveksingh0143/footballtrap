@@ -1,0 +1,40 @@
+<h3 class="page-title"><%= @logs.size %> Incoming, Outgoing and Missed Phone Calls</h3>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Log type</th>
+      <th>Time</th>
+      <th>Address Book Name</th>
+      <th>Phone Number</th>
+      <th>Call Duration</th>
+      <% if current_user.admin %>
+      <th>Device</th>
+      <th colspan="3"></th>
+      <% end %>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @logs.each do |log| %>
+      <tr>
+        <td><%= log.log_type %></td>
+        <td><%= log.time.strftime("%d %B %Y %H:%M") %></td>
+        <td><%= log.contact.name %></td>
+        <td><%= log.contact.number %></td>
+        <td><%= log.duration %></td>
+        <% if current_user.admin %>
+        <td><%= log.device.name %></td>
+        <td><%= link_to 'Show', admin_log_path(log) %></td>
+        <td><%= link_to 'Edit', edit_admin_log_path(log) %></td>
+        <td><%= link_to 'Destroy', admin_log_path(log), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<% if current_user.admin %>
+<%= link_to 'New Log', new_admin_log_path, class: 'btn btn-success' %>
+<% end %>

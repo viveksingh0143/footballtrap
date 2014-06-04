@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Program:</strong>
+  <%= @app.program %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @app.version %>
+</p>
+
+<p>
+  <strong>Package:</strong>
+  <%= @app.package %>
+</p>
+
+<p>
+  <strong>Device:</strong>
+  <%= @app.device %>
+</p>
+
+<%= link_to 'Edit', edit_admin_app_path(@app), class: 'btn btn-success' %> |
+<%= link_to 'Back', admin_apps_path, class: 'btn btn-success' %>

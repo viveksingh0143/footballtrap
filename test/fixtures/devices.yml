@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  imei: MyString
+  serial_number: MyString
+  devise_type: MyString
+  os: MyString
+  hardware_platform: MyString
+  platform_string: MyString
+  total_memory: MyString
+  total_disk: MyString
+  free_disk_space: MyString
+  user_id: 
+
+two:
+  name: MyString
+  imei: MyString
+  serial_number: MyString
+  devise_type: MyString
+  os: MyString
+  hardware_platform: MyString
+  platform_string: MyString
+  total_memory: MyString
+  total_disk: MyString
+  free_disk_space: MyString
+  user_id: 

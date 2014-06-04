@@ -1,0 +1,24 @@
+<div class="col-sm-6">
+<%= simple_form_for(@user, :html => {class: 'form-horizontal', role: 'form'}) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-group">
+    <%= f.input :username, placeholder: 'Username', input_html: { class: 'form-control' } %>
+  </div>
+        
+  <div class="form-group">
+    <%= f.input :email, placeholder: 'Email', input_html: { class: 'form-control' } %>
+  </div>
+
+  <div class="form-group">
+    <%= f.input :password, placeholder: 'Password', input_html: { class: 'form-control' } %>
+  </div>
+  <div class="form-group">
+    <%= f.input :password_confirmation, placeholder: 'Password Confirmation', input_html: { class: 'form-control' } %>
+  </div>
+   
+  <div class="form-actions">
+    <%= f.button :submit, 'Sign Up' %>
+  </div>
+<% end %>
+</div>

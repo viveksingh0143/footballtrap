@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-sm-5 col-md-6">
+    <h1>Editing <%= singular_table_name %></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-8 col-md-10">
+    <%%= render 'form' %>
+  </div>
+</div>
+<br />
+<div class="row">
+  <div class="col-sm-5 col-md-6">
+    <%%= link_to 'Show', @<%= singular_table_name %>, class: 'btn btn-default' %> |
+    <%%= link_to 'Back', <%= index_helper %>_path, class: 'btn btn-default' %>
+  </div>
+</div>

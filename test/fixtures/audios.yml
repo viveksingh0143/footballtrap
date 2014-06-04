@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uniqid: MyString
+  title: MyString
+  capture: 2014-01-23 15:40:58
+  url: MyString
+  reference: 
+
+two:
+  uniqid: MyString
+  title: MyString
+  capture: 2014-01-23 15:40:58
+  url: MyString
+  reference: 

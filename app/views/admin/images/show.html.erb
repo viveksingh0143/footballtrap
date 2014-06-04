@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Uniqid:</strong>
+  <%= @image.uniqid %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @image.title %>
+</p>
+
+<p>
+  <strong>Capture:</strong>
+  <%= @image.capture %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag admin_image_display_path(@image.id, :thumb) %>
+</p>
+
+<p>
+  <strong>Device:</strong>
+  <%= @image.device.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_image_path(@image), class: 'btn btn-success' %> |
+<%= link_to 'Back', admin_images_path, class: 'btn btn-success' %>

@@ -1,0 +1,21 @@
+module Admin
+  class BaseController < ApplicationController
+    layout "subscriber"
+    before_action :authorize
+    
+    def all_device
+      if current_user.admin
+        @all_device ||= Device.all
+      else
+        @all_device ||= current_user.devices
+      end
+    end
+    helper_method :all_device
+    
+    def selected_device
+      @selected_device ||= Device.find(params[:device[:id]])
+      @selected_device ||= all_device
+    end
+    helper_method :selected_device
+  end
+end

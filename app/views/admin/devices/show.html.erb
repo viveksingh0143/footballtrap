@@ -1,0 +1,254 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @device.name %>
+</p>
+
+<p>
+  <strong>Imei:</strong>
+  <%= @device.imei %>
+</p>
+
+<p>
+  <strong>Serial number:</strong>
+  <%= @device.serial_number %>
+</p>
+
+<p>
+  <strong>Devise type:</strong>
+  <%= @device.devise_type %>
+</p>
+
+<p>
+  <strong>Os:</strong>
+  <%= @device.os %>
+</p>
+
+<p>
+  <strong>Hardware platform:</strong>
+  <%= @device.hardware_platform %>
+</p>
+
+<p>
+  <strong>Platform string:</strong>
+  <%= @device.platform_string %>
+</p>
+
+<p>
+  <strong>Total memory:</strong>
+  <%= @device.total_memory %>
+</p>
+
+<p>
+  <strong>Total disk:</strong>
+  <%= @device.total_disk %>
+</p>
+
+<p>
+  <strong>Free disk space:</strong>
+  <%= @device.free_disk_space %>
+</p>
+
+<p>
+  <strong>Device Id:</strong>
+  <%= @device.deviceid %>
+</p>
+
+<p>
+  <strong>Device Software Version:</strong>
+  <%= @device.device_software_version %>
+</p>
+
+<p>
+  <strong>Version Incremental:</strong>
+  <%= @device.version_incremental %>
+</p>
+
+<p>
+  <strong>Os Version:</strong>
+  <%= @device.os_version %>
+</p>
+
+<p>
+  <strong>Available Processors:</strong>
+  <%= @device.available_processors %>
+</p>
+
+<p>
+  <strong>Build Id:</strong>
+  <%= @device.build_id %>
+</p>
+
+<p>
+  <strong>Build Board:</strong>
+  <%= @device.build_board %>
+</p>
+
+<p>
+  <strong>Build Bootloader:</strong>
+  <%= @device.build_bootloader %>
+</p>
+
+<p>
+  <strong>Build Brand:</strong>
+  <%= @device.build_brand %>
+</p>
+
+<p>
+  <strong>Build Display:</strong>
+  <%= @device.build_display %>
+</p>
+
+<p>
+  <strong>Build Fingerprint:</strong>
+  <%= @device.build_fingerprint %>
+</p>
+
+<p>
+  <strong>Build Hardware:</strong>
+  <%= @device.build_hardware %>
+</p>
+
+<p>
+  <strong>Build Host:</strong>
+  <%= @device.build_host %>
+</p>
+
+<p>
+  <strong>Build Manufacturer:</strong>
+  <%= @device.build_manufacturer %>
+</p>
+
+<p>
+  <strong>Build Model:</strong>
+  <%= @device.build_model %>
+</p>
+
+<p>
+  <strong>Build Product:</strong>
+  <%= @device.build_product %>
+</p>
+
+<p>
+  <strong>Build Serial:</strong>
+  <%= @device.build_serial %>
+</p>
+
+<p>
+  <strong>Build Tags:</strong>
+  <%= @device.build_tags %>
+</p>
+
+<p>
+  <strong>Build Time:</strong>
+  <%= @device.build_time %>
+</p>
+
+<p>
+  <strong>Build Type:</strong>
+  <%= @device.build_type %>
+</p>
+
+<p>
+  <strong>Build Unknown:</strong>
+  <%= @device.build_unknown %>
+</p>
+
+<p>
+  <strong>Build User:</strong>
+  <%= @device.builduser %>
+</p>
+
+<p>
+  <strong>Build Cpu Abi:</strong>
+  <%= @device.build_cpu_abi %>
+</p>
+
+<p>
+  <strong>Build Cpu Abi2:</strong>
+  <%= @device.build_cpu_abi2 %>
+</p>
+
+<p>
+  <strong>Build Version Release:</strong>
+  <%= @device.build_version_release %>
+</p>
+
+<p>
+  <strong>Build Version Sdk:</strong>
+  <%= @device.build_version_sdk %>
+</p>
+
+<p>
+  <strong>Free Memory Latitude:</strong>
+  <%= @device.free_memory_latitude %>
+</p>
+
+<p>
+  <strong>Line1 Number Longitude:</strong>
+  <%= @device.line1_number_longitude %>
+</p>
+
+<p>
+  <strong>Max Memory:</strong>
+  <%= @device.max_memory %>
+</p>
+
+<p>
+  <strong>Network Country Iso:</strong>
+  <%= @device.network_kountry_iso %>
+</p>
+
+<p>
+  <strong>Network Operator Name:</strong>
+  <%= @device.network_operator_name %>
+</p>
+
+<p>
+  <strong>Os Build Brand:</strong>
+  <%= @device.os_build_brand %>
+</p>
+
+<p>
+  <strong>Os Build Device:</strong>
+  <%= @device.os_build_device %>
+</p>
+
+<p>
+  <strong>Os Build Manufacturer:</strong>
+  <%= @device.os_build_manufacturer %>
+</p>
+
+<p>
+  <strong>Os Build Model:</strong>
+  <%= @device.os_build_model %>
+</p>
+
+<p>
+  <strong>Os Build Version Release:</strong>
+  <%= @device.os_build_version_release %>
+</p>
+
+<p>
+  <strong>Sim Country Iso:</strong>
+  <%= @device.sim_kountry_iso %>
+</p>
+
+<p>
+  <strong>Sim Serial Number:</strong>
+  <%= @device.sim_serial_number %>
+</p>
+
+<p>
+  <strong>Voice Mail Number:</strong>
+  <%= @device.voice_mail_number %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @device.user.username if @device.user %>
+</p>
+
+<%= link_to 'Edit', edit_admin_device_path(@device), class: 'btn btn-success' %> |
+<%= link_to 'Back', admin_devices_path, class: 'btn btn-success' %>

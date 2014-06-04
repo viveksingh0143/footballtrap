@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uniqid: MyString
+  contact: 
+  msg_type: MyString
+  message: MyText
+  time: 2014-01-10 19:30:30
+  device_id: 
+
+two:
+  uniqid: MyString
+  contact: 
+  msg_type: MyString
+  message: MyText
+  time: 2014-01-10 19:30:30
+  device_id: 
