@@ -3,7 +3,7 @@ upstream footballtrap_server {
 }
 
 server {
-  listen 80 default deferred;
+  listen 80;
   server_name footballtrap.vamikatech.com www.footballtrap.vamikatech.com;
   root /home/vamika/apps/footballtrap/current/public;
 
