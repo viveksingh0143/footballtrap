@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140509153614) do
+ActiveRecord::Schema.define(version: 20140605065415) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -145,16 +145,18 @@ ActiveRecord::Schema.define(version: 20140509153614) do
   add_index "images", ["device_id"], name: "index_images_on_device_id", using: :btree
 
   create_table "locations", force: true do |t|
-    t.string   "latitude"
-    t.string   "longitude"
+    t.float    "latitude"
+    t.float    "longitude"
     t.datetime "time"
     t.integer  "device_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "address"
+    t.float    "travel"
   end
 
   add_index "locations", ["device_id"], name: "index_locations_on_device_id", using: :btree
+  add_index "locations", ["latitude", "longitude"], name: "index_locations_on_latitude_and_longitude", using: :btree
 
   create_table "logs", force: true do |t|
     t.string   "uniqid"
