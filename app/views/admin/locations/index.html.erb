@@ -23,7 +23,7 @@
           <td><%= location.latitude %></td>
           <td><%= location.longitude %></td>
           <td><%= location.time.strftime("%d %B %Y %H:%M") %></td>
-          <td><%= location.travel.round(2) %></td>
+          <td><%= location.travel.round(2) if location.travel %></td>
           <% if current_user.admin %>
           <td><%= location.device.name %></td>
           <td><%= link_to 'Show', admin_location_path(location) %></td>
