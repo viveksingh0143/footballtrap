@@ -23,8 +23,9 @@ class Location < ActiveRecord::Base
   def set_travel
     last_location = self.device.locations
     if self.id
-      last_location = last_location.where("id < ?", self.id).last
+      last_location = last_location.where("id < ?", self.id)
     end
+    last_location = last_location.last
     if last_location
       self.travel = self.distance_from([last_location.latitude, last_location.longitude])
       if last_location.travel
