@@ -1,6 +1,6 @@
-<h3 class="page-title"><%= pluralize( @devices.size, 'Phone' ) %> on Dashboard <span class="n-space"></span>
+<h3 class="page-title"><%= pluralize( @devices.size, 'Football' ) %> on Dashboard <span class="n-space"></span>
   <% if current_user.admin %>
-  <%= link_to 'New Device', new_admin_device_path, class: 'btn btn-success' %>
+  <%= link_to 'New Football', new_admin_device_path, class: 'btn btn-success' %>
 <% end %>
 </h3>
 <% @devices.each do |device| %>
@@ -28,117 +28,9 @@
           </tbody>
         </table>
       </div>
-      <div class="panel panel-success">
-        <div class="panel-heading">Extracted info from this phone:</div>
-        <div class="panel-body">
-          <table class="table att-container">
-            <tbody>
-              <tr>
-                <td>
-                  <%= link_to(admin_logs_path(device_id: device.id, start_time: params[:start_time], end_time: params[:end_time])) do %>
-                    <%= content_tag(:i, "", class: "fa fa-phone") %> Call History <%= content_tag(:span, device.logs.count, class: "att-count") %>
-                  <% end %>
-                </td>
-                <td>
-                  <%= link_to(admin_contacts_path(device_id: device.id, start_time: params[:start_time], end_time: params[:end_time])) do %>
-                    <%= content_tag(:i, "", class: "fa fa-book") %> Address Book <%= content_tag(:span, device.contacts.count, class: "att-count") %>
-                  <% end %>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <%= link_to(admin_messages_path(device_id: device.id, start_time: params[:start_time], end_time: params[:end_time])) do %>
-                    <%= content_tag(:i, "", class: "fa fa-comment") %> SMS History <%= content_tag(:span, device.messages.count, class: "att-count") %>
-                  <% end %>
-                </td>
-                <td>
-                  <%= link_to(admin_locations_path(device_id: device.id, start_time: params[:start_time], end_time: params[:end_time])) do %>
-                    <%= content_tag(:i, "", class: "fa fa-map-marker") %> GPS Location <%= content_tag(:span, device.locations.count, class: "att-count") %>
-                  <% end %>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <%= link_to(admin_apps_path(device_id: device.id, start_time: params[:start_time], end_time: params[:end_time])) do %>
-                    <%= content_tag(:i, "", class: "fa fa-briefcase") %> Installed App <%= content_tag(:span, device.apps.count, class: "att-count") %>
-                  <% end %>
-                </td>
-                <td>
-                  <%= link_to(admin_images_path(device_id: device.id, start_time: params[:start_time], end_time: params[:end_time])) do %>
-                    <%= content_tag(:i, "", class: "fa fa-camera") %> Images <%= content_tag(:span, device.images.count, class: "att-count") %>
-                  <% end %>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <%= link_to(admin_audios_path(device_id: device.id, start_time: params[:start_time], end_time: params[:end_time])) do %>
-                    <%= content_tag(:i, "", class: "fa fa-music") %> Audio File <%= content_tag(:span, device.audios.count, class: "att-count") %>
-                  <% end %>
-                </td>
-                <td>
-                  <%= link_to(admin_videos_path(device_id: device.id, start_time: params[:start_time], end_time: params[:end_time])) do %>
-                    <%= content_tag(:i, "", class: "fa fa-film") %> Video File <%= content_tag(:span, device.videos.count, class: "att-count") %>
-                  <% end %>
-                </td>
-              </tr>
-              <!--tr>
-                <td>
-                  <%= link_to("#") do %>
-                    <%= content_tag(:i, "", class: "fa fa-globe") %> GPS Notification <%= content_tag(:span, "0", class: "att-count") %>
-                  <% end %>
-                </td>
-                <td>
-                  <%= link_to("#") do %>
-                    <%= content_tag(:i, "", class: "fa fa-comments") %> WhatsApp <%= content_tag(:span, "0", class: "att-count") %>
-                  <% end %>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <%= link_to("#") do %>
-                    <%= content_tag(:i, "", class: "fa fa-globe") %> Browser History <%= content_tag(:span, "0", class: "att-count") %>
-                  <% end %>
-                </td>
-                <td>
-                  <%= link_to("#") do %>
-                    <%= content_tag(:i, "", class: "fa fa-envelope") %> Email History <%= content_tag(:span, "0", class: "att-count") %>
-                  <% end %>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <%= link_to("#") do %>
-                    <%= content_tag(:i, "", class: "fa fa-bookmark") %> Bookmarks <%= content_tag(:span, "0", class: "att-count") %>
-                  <% end %>
-                </td>
-                <td>
-                  <%= link_to("#") do %>
-                    <%= content_tag(:i, "", class: "fa fa-tasks") %> Events <%= content_tag(:span, "0", class: "att-count") %>
-                  <% end %>
-                </td>
-              </tr-->
-            </tbody>
-          </table>
-        </div>
-      </div>
       <div class="content-box-bottom-content">
         <table class="table att-container">
           <tbody>
-            <tr>
-              <td><span class="att-label">OS:</span><%= device.os %></td>
-              <td><span class="att-label">Hardware Platform:</span><%= device.hardware_platform %></td>
-              <td><span class="att-label">Platform String:</span><%= device.platform_string %></td>
-            </tr>
-            <tr>
-              <td><span class="att-label">Total Memory:</span><%= device.total_memory %></td>
-              <td><span class="att-label">Total Disk Space:</span><%= device.total_disk %></td>
-              <td><span class="att-label">Free Disk Space:</span><%= device.free_disk_space %></td>
-            </tr>
-            <tr>
-              <td><span class="att-label">Imei:</span><%= device.imei %></td>
-              <td><span class="att-label">Serial Number:</span><%= device.serial_number %></td>
-              <td>&nbsp;</td>
-            </tr>
             <% if current_user.admin %>
               <tr>
                 <td><span class="att-label">User:</span><%= device.user.username if device.user %></td>

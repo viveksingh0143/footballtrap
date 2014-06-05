@@ -19,7 +19,11 @@ Footballtrap::Application.routes.draw do
     resources :logs
     resources :apps
     resources :contacts
-    resources :locations
+    resources :locations do
+      collection do
+        get 'ajax_list_load'
+      end
+    end
     resources :images do
       get 'display/:version', :action => 'display', :as => 'display'
     end

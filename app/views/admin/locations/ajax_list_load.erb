@@ -1,0 +1,14 @@
+<% @locations.each do |location| %>
+  <tr>
+    <td><%= location.address %></td>
+    <td><%= location.latitude %></td>
+    <td><%= location.longitude %></td>
+    <td><%= location.time.strftime("%d %B %Y %H:%M") %></td>
+    <% if current_user.admin %>
+    <td><%= location.device.name %></td>
+    <td><%= link_to 'Show', admin_location_path(location) %></td>
+    <td><%= link_to 'Edit', edit_admin_location_path(location) %></td>
+    <td><%= link_to 'Destroy', admin_location_path(location), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+  </tr>
+<% end %>
