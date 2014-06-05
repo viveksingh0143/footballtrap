@@ -22,7 +22,7 @@ class Permission
       allow 'admin/logs', [:index]
       allow 'admin/contacts', [:index]
       allow 'admin/messages', [:index]
-      allow 'admin/locations', [:index]
+      allow 'admin/locations', [:index, :ajax_list_load]
       allow 'admin/apps', [:index]
       allow 'admin/images', [:index, :display]
       allow 'admin/audios', [:index, :display]
